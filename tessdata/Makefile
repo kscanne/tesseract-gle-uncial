@@ -4,6 +4,6 @@ gle.freq-dawg:	gle.freq-text gle.unicharset
 gle-uncial.freq-dawg:	gle-uncial.freq-text gle-uncial.unicharset
 	wordlist2dawg gle-uncial.freq-text gle-uncial.freq-dawg gle-uncial.unicharset
 	
-gle-uncial.user-dawg:	gle-uncial.user-text gle-uncial.unicharset
-	wordlist2dawg gle-uncial.user-text gle-uncial.user-dawg gle-uncial.unicharset
+gle-uncial.word-dawg:	gle-uncial.word-text gle-uncial.unicharset
+	wordlist2dawg gle-uncial.word-text gle-uncial.word-dawg gle-uncial.unicharset
 
