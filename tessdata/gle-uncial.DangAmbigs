@@ -11,7 +11,9 @@
 2	l i	1	h
 2	l r	1	h
 2	i i	1	u
+2	í i	1	u
 2	i i	1	n
+2	í i	1	n
 2	1 1	1	r
 2	n i	1	m
 3	i i i	1	m
@@ -43,3 +45,5 @@
 3	1 i 1	1	ṁ
 2	1 1	1	r
 2	1 h	1	ṁ
+2	s i	1	r
+2	s i	1	s
