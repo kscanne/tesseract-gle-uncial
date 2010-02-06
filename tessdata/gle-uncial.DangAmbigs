@@ -7,6 +7,7 @@
 2	n n	2	r m
 2	r m	2	n n
 1	n	2	r i
+1	n	2	r í
 2	r i	1	n
 2	l i	1	h
 2	l r	1	h
@@ -16,6 +17,7 @@
 2	í i	1	n
 2	1 1	1	r
 2	n i	1	m
+2	n i	1	ṁ
 3	i i i	1	m
 3	i i i	1	ṁ
 3	i í i	1	ṁ
@@ -47,3 +49,5 @@
 2	1 h	1	ṁ
 2	s i	1	r
 2	s i	1	s
+2	s o	1	s
+2	s í	1	r
