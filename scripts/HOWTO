@@ -1,0 +1,37 @@
+Creating and editing box files.
+
+* Go into a pages/* directory in SVN
+* should symbolically link breaks.pl, getdiffs.pl, makefile, token.sh there
+* let's say we're on page 004, and we have 004.tif and 004.txt transcription
+* open the .tif image for reference
+* $ make 004.box  (assumes we have gle-uncial model built and installed already)
+* $ vi 004.txt
+  Add page header, anything else obviously missing
+* $ bash token.sh 004
+  This script *does not* affect 004.txt or 004.box.  The net result of it is to 
+  generate what it hopes will be an improved/corrected box file which gets the
+  name 004.box.2.   It does this by aligning words in 004.box with 004.txt and
+  then checking for likely substitutions in the box file, and merging boxes where
+  appropriate.   For it to work, the number of words must be identical, so when
+  you're initially thrown into vimdiff, go through and add/delete <w> markers
+  so that the number of words is the same.   Don't bother making any other
+  corrections manually at this stage.  Only exceptions: if chars were dropped from
+  the OCR output (LHS), as sometimes happens, it's ok to remove them from the 
+  RHS and this may improve the results (again, won't affect the transcription).
+  And if there's dark blue on the RHS, these may be extra inserted characters
+  and should be corrected by hand.
+* $ diff -u 004.box 004.box.2
+  If all the corrections look legitimate, mv 004.box.2 to 004.box.   Sometimes
+  only a subset of this diff is OK, and you can copy that to a patch and apply
+  just that patch.  
+     Next, in two other windows, open 004.box and 004.txt.
+* $ bash token.sh 004
+  Go through vimdiff and use the info there to manually finish corrected 004.box
+  (and occasionally correcting things in 004.txt as well).  When done:
+* $ bash token.sh 004
+  The only remaining differences should be ligatures and occasional differences
+  in word breaks <w> (from words jammed together or spread out too much, e.g. 
+  after "d'")
+* $ svn commit -m "Transcription corrected based on OCR output"  004.txt
+* $ svn add 004.box
+* $ svn commit -m "Manually corrected box file" 004.box
