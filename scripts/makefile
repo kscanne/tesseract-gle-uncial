@@ -24,25 +24,17 @@ SVN_TESSDATA=$(HOME)/ocr/tesseract-gle-uncial/tessdata
 # for this, so no need to specify -l $(TESSLANG), and want 
 # TESSDATA_PREFIX to be unset
 train :
-	tesseract 001.tif junk nobatch box.train
-	cat tesseract.log
-	tesseract 002.tif junk nobatch box.train
-	cat tesseract.log
-	tesseract 004.tif junk nobatch box.train
-	cat tesseract.log
-	tesseract 005.tif junk nobatch box.train
-	cat tesseract.log
-	tesseract 006.tif junk nobatch box.train
-	cat tesseract.log
-	tesseract 010.tif junk nobatch box.train
-	cat tesseract.log
-	tesseract 011.tif junk nobatch box.train
-	cat tesseract.log
-	tesseract 012.tif junk nobatch box.train
-	cat tesseract.log
+	tesseract 001.tif junk nobatch box.train.stderr
+	tesseract 002.tif junk nobatch box.train.stderr
+	tesseract 004.tif junk nobatch box.train.stderr
+	tesseract 005.tif junk nobatch box.train.stderr
+	tesseract 006.tif junk nobatch box.train.stderr
+	tesseract 010.tif junk nobatch box.train.stderr
+	tesseract 011.tif junk nobatch box.train.stderr
+	tesseract 012.tif junk nobatch box.train.stderr
+	unicharset_extractor 001.box 002.box 004.box 005.box 006.box 010.box 011.box 012.box
 	mftraining 001.tr 002.tr 004.tr 005.tr 006.tr 010.tr 011.tr 012.tr
 	cntraining 001.tr 002.tr 004.tr 005.tr 006.tr 010.tr 011.tr 012.tr
-	unicharset_extractor 001.box 002.box 004.box 005.box 006.box 010.box 011.box 012.box
 	mv -f inttemp $(SVN_TESSDATA)/gle-uncial.inttemp
 	rm -f junk.txt Microfeat
 	mv -f normproto $(SVN_TESSDATA)/gle-uncial.normproto
