@@ -1,3 +1,6 @@
+gle-uncial.traineddata: 
+	combine_tessdata $(HOME)/seal/tesseract-gle-uncial/tessdata/gle-uncial.
+
 gle.freq-dawg:	gle.freq-text
 	wordlist2dawg gle.freq-text gle.freq-dawg
 
