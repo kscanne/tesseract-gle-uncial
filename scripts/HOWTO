@@ -35,3 +35,9 @@ Creating and editing box files.
 * $ svn commit -m "Transcription corrected based on OCR output"  004.txt
 * $ svn add 004.box
 * $ svn commit -m "Manually corrected box file" 004.box
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Box files -> OCR model files (bundled in gle-uncial-traineddata):
+
+* See script trainer.sh in this directory, then look at ../tessdata/makefile
