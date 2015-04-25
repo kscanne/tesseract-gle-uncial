@@ -1,2 +1,5 @@
 tessdata/gle-uncial.shapetable
 tessdata/gle-uncial.traineddata
+tessdata/gle.freq-dawg
+tessdata/gle-uncial.freq-dawg
+tessdata/gle-uncial.word-dawg
