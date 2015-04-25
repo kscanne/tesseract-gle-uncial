@@ -2,7 +2,7 @@ DATADIR=/usr/share/tesseract-ocr/tessdata
 #DATADIR=/usr/local/share/tessdata
 INSTALL=/usr/bin/install
 
-all: gle-uncial.traineddata gle.freq-dawg
+all: gle-uncial.traineddata
 
 gle-uncial.traineddata: gle-uncial.DangAmbigs gle-uncial.freq-dawg gle-uncial.inttemp gle-uncial.normproto gle-uncial.pffmtable gle-uncial.unicharset gle-uncial.user-words gle-uncial.word-dawg
 	combine_tessdata ./gle-uncial.
