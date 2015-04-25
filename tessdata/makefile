@@ -21,3 +21,7 @@ install:
 
 clean:
 	rm -f gle-uncial.word-dawg gle-uncial.freq-dawg gle.freq-dawg gle-uncial.traineddata
+
+distclean:
+	$(MAKE) clean
+	rm -f gle-uncial.shapetable gle-uncial.inttemp gle-uncial.normproto gle-uncial.pffmtable gle-uncial.unicharset
