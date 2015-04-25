@@ -1,5 +1,9 @@
+tessdata/gle-uncial.freq-dawg
+tessdata/gle-uncial.inttemp
+tessdata/gle-uncial.normproto
+tessdata/gle-uncial.pffmtable
+tessdata/gle-uncial.unicharset
+tessdata/gle-uncial.word-dawg
 tessdata/gle-uncial.shapetable
 tessdata/gle-uncial.traineddata
 tessdata/gle.freq-dawg
-tessdata/gle-uncial.freq-dawg
-tessdata/gle-uncial.word-dawg
