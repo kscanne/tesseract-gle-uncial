@@ -35,4 +35,4 @@ mv -f shapetable "${2}.shapetable"
 # By doing it in ../tessdata, we bundle dawg files in there too
 make "${2}.traineddata"
 rm -f font_properties unicharset
-rm -f ${TRFILES}
+rm -f ${TRFILES} ${TXTFILES}
